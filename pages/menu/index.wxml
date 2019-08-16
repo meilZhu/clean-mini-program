@@ -1,0 +1,3 @@
+<!--pages/menu/index.wxml-->
+<text>pages/menu/index.wxml</text>
+<button bindtap='jumpSupplierAdd'>去供应商新增页面</button>

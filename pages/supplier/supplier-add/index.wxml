@@ -1,0 +1,4 @@
+<!--pages/supplier//supplier-add/index.wxml-->
+<text>pages/supplier//supplier-add/index.wxml</text>
+<button bindtap='jumpUserCenter'>去个人中心页面</button>
+
