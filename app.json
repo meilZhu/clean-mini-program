@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/user/user-center/index",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/menu/index",
-    "pages/user/user-center/index"
+    "pages/menu/index"
   ],
   "subPackages": [
     {
@@ -25,7 +25,7 @@
   ],
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#e954de",
+    "navigationBarBackgroundColor": "#3F8BFF",
     "navigationBarTitleText": "微信小程序title",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true

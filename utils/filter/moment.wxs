@@ -1,0 +1,41 @@
+/*
+ * @FileName: 
+ * @Author: 朱满要
+ * @Date: 2019-08-19 18:12:33
+ */
+var DateFr = {
+
+  getDate: function (time, splitStr) {
+    if (!time) return '';
+    time = Number(time);
+    var date = getDate(time);
+    var M = date.getMonth() + 1;
+    var y = date.getFullYear();
+    var d = date.getDate();
+
+    if (M < 10) M = "0" + M;
+    if (d < 10) d = "0" + d;
+
+    if (splitStr)
+      return y +splitStr + M +splitStr+d;
+    else
+      return {
+        y: y,
+        M: M,
+        d: d
+      };
+  },
+  
+  initSecond: function (time) {
+    if (!time) return
+    var d = Math.floor(time/24*60*60);
+    var h = Math.floor((time-d*(24*60*60))/60*60);
+    var m = Math.floor((time-d*(24*60*60)-h*(60*60))/60);
+    return d + '天' + h + '小时' + m + '分钟'
+  }
+}
+
+module.exports = {
+  getDate: DateFr.getDate,
+  initSecond: DateFr.initSecond
+}

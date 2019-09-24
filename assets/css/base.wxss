@@ -1,4 +1,10 @@
-view,text,image {
+view,
+text,
+image,
+textarea,
+button,
+input {
   box-sizing: border-box;
-  color: #f00;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }

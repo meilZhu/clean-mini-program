@@ -1,3 +1,6 @@
 <!--pages/menu/index.wxml-->
 <text>pages/menu/index.wxml</text>
-<button bindtap='jumpSupplierAdd'>去供应商新增页面</button>
+<button bindtap="jumpSupplierAdd">去供应商新增页面</button>
+<button bindtap="debounce">测试防抖</button>
+<button bindtap="debouncenow">测试防抖(立即执行)</button>
+<button bindtap="throttle">节流防抖</button>

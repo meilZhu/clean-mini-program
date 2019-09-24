@@ -1,2 +1,2 @@
 <!--pages/user/user-center/index.wxml-->
-<text>pages/user/user-center/index.wxml</text>
+<zmy-date-picker></zmy-date-picker>

@@ -1,4 +1,10 @@
+/*
+ * @FileName: 
+ * @Author: 朱满要
+ * @Date: 2019-08-16 15:47:10
+ */
 //app.js
+import ZMY from './utils/index'
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -35,5 +41,6 @@ App({
   },
   globalData: {
     userInfo: null
-  }
+  },
+  ...ZMY
 })

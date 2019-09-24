@@ -1,3 +1,8 @@
+/*
+ * @FileName: 
+ * @Author: 朱满要
+ * @Date: 2019-08-16 15:47:10
+ */
 //index.js
 //获取应用实例
 const app = getApp()
@@ -50,5 +55,8 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  onShow: function() {
+    console.log(app)
   }
 })

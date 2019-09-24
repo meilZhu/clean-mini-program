@@ -1,0 +1,40 @@
+{
+  //配置 ESLint 检查的文件类型
+  "eslint.validate": ["javascript", "javascriptreact"],
+  //保存时eslint自动修复错误
+  "eslint.autoFixOnSave": true,
+  //开启 eslint 支持
+  "prettier.eslintIntegration": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.tslint": true
+  },
+  //使用单引号
+  "prettier.singleQuote": true,
+  //结尾不加分号
+  "prettier.semi": true,
+  "fileheader.configObj": {
+    "autoAdd": true,
+    "autoAlready": true,
+    "language": {
+      "javascript": {
+        "head": "/***",
+        "middle": " * @",
+        "end": " */"
+      }
+    },
+    "config": {
+      "prohibitAutoAdd": ["json", "md", "html", "vue"]
+    }
+  },
+  "fileheader.customMade": {
+    "file": "",
+    "Date": "Do not edit",
+    "author": "manyao.zhu"
+  },
+  // html格式化
+  "minapp-vscode.wxmlFormatter": "prettier",
+  "minapp-vscode.prettier": {
+    "parser": "html"
+  }
+}
