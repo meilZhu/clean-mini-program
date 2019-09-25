@@ -3,7 +3,8 @@
     "pages/user/user-center/index",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/menu/index"
+    "pages/menu/index",
+    "pages/test/index"
   ],
   "subPackages": [
     {

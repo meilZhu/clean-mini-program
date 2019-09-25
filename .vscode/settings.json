@@ -28,9 +28,16 @@
     }
   },
   "fileheader.customMade": {
+    "fileName": "",
     "file": "",
     "Date": "Do not edit",
     "author": "manyao.zhu"
+  },
+  "fileheader.cursorMode": {
+    "@description": "",
+    "@param": "{type}",
+    "@method": "",
+    "@return": ""
   },
   // html格式化
   "minapp-vscode.wxmlFormatter": "prettier",

@@ -1,0 +1,209 @@
+/*勾选的外壳*/
+.zmy-check-contain {
+  width: 100%;
+  padding: 20rpx;
+  display: flex;
+  border-radius: 3rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+/*没有勾选的list的外壳*/
+.zmy-list-contain {
+  border-radius: 3rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+  padding: 20rpx 0;
+  position: relative;
+}
+
+/*选择框的样式*/
+.zmy-check {
+  margin-right: 10rpx;
+  margin-top: 10rpx;
+  flex-shrink: 0;
+}
+
+/*有勾选是内部list的壳子*/
+.zmy-flex-inner-contain {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/*一行中展示两行数据样式*/
+.zmy-double-list {
+  display: flex;
+}
+
+/*每行上下间距比较小的样式*/
+.zmy-small-list {
+  flex: 1;
+  padding: 4rpx 24rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30rpx;
+  color: #666;
+}
+
+/*每行的样式*/
+.zmy-list {
+  width: 100%;
+  padding: 10rpx 20rpx 10rpx 30rpx;
+  font-size: 28rpx;
+  color: #666666;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*每行padding-left比较小的问题*/
+.zmy-small-padding-list {
+  padding-left: 10rpx;
+}
+
+/*标题样式*/
+.zmy-title {
+  flex-shrink: 0;
+  margin-right: 15rpx;
+}
+/*值的样式*/
+.zmy-name {
+  color: #353535;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*状态的处理*/
+.zmy-name-state {
+  padding: 5rpx 25rpx;
+  border: 1rpx #353535 solid;
+  border-radius: 24rpx;
+}
+.zmy-state-success {
+  border-color: #09bb07;
+  color: #09bb07;
+}
+.zmy-state-waiting {
+  color: #ffc411;
+  border-color: #ffc411;
+}
+.zmy-state-error {
+  color: #e64340;
+  border-color: #e64340;
+}
+/*输入框的处理*/
+.zmy-input {
+  flex: 1;
+  text-align: right;
+}
+.zmy-input-placeholder {
+  color: #999;
+}
+/*时间选择器尾部图标样式的处理*/
+.zmy-date {
+  flex-shrink: 0;
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 35rpx;
+}
+
+/*向右的图标的样式*/
+.zmy-icon-right {
+  flex-shrink: 0;
+  width: 25rpx;
+  height: 29rpx;
+  margin-left: 23rpx;
+}
+
+/*填写信息的icon的样式*/
+.zmy-input-icon {
+  margin-left: 15rpx;
+}
+
+/*每行最后面向上向下的箭头样式的处理*/
+.zmy-arrow-up-down {
+  flex-shrink: 0;
+  width: 26rpx;
+  height: 14rpx;
+  margin-left: 21rpx;
+}
+
+/*滑动删除样式的处理*/
+.zmy-remove {
+  background: #e64340;
+  width: 130rpx;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*列表操作按钮的样式(这个是三个点)*/
+.zmy-opr-btn {
+  width: 80rpx;
+  height: 80rpx;
+  text-align: left;
+  line-height: 80rpx;
+  position: absolute;
+  top: -10rpx;
+  right: 0rpx;
+  color: #5f9efd;
+  font-size: 44rpx;
+}
+
+/*单元格的样式*/
+.zmy-cell {
+  width: 100%;
+  height: 88rpx;
+  border-bottom: 1rpx #ddd solid;
+  padding-left: 30rpx;
+  background: #fff;
+  line-height: 70rpx;
+}
+
+/*单元格且字体较粗，还有左边竖线*/
+.zmy-cell-title {
+  width: 100%;
+  height: 90rpx;
+  border-bottom: 1rpx #ddd solid;
+  padding-left: 60rpx;
+  background: #fff;
+  line-height: 90rpx;
+  font-size: 37rpx;
+  color: #191919;
+  position: relative;
+}
+.zmy-cell-title::before {
+  display: inline-block;
+  content: '';
+  width: 6rpx;
+  height: 30rpx;
+  background: #5f9efd;
+  position: absolute;
+  top: 50%;
+  margin-top: -14rpx;
+  left: 25rpx;
+}
+
+/*整个页面盒子的样式*/
+.zmy-management,
+.zmy-opr,
+.zmy-choose {
+  width: 100%;
+  background: #f4f4f4;
+  min-height: 100%;
+}
+
+/*数据存储的盒子的样式(以及详情时，没有曹组按钮的样式)*/
+.zmy-contain {
+  width: 100%;
+  padding: 20rpx 150rpx;
+}
+.zmy-detail-contain {
+  padding-bottom: 20rpx;
+}

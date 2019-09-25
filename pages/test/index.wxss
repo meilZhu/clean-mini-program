@@ -1,0 +1,2 @@
+/* pages/test/index.wxss */
+@import '/assets/css/base.wxss';

@@ -1,0 +1,132 @@
+/**
+ * 页面底部操按钮的样式
+ */
+
+/*操作按钮盒子的样式*/
+.zmy-btn-contain {
+  width: 100%;
+  height: 135rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-top: 1rpx #f1f1f1 solid;
+}
+/*所有按钮的样式*/
+.zmy-btn {
+  width: 215rpx;
+  height: 68rpx;
+  background: #fff;
+  color: #5e9dfd;
+  border: 1rpx #5e9dfd solid;
+  line-height: 68rpx;
+  font-size: 28rpx;
+}
+/*去定按钮的样式*/
+.zmy-sure-btn {
+  color: #fff;
+  background: #5e9dfd;
+}
+/*单独一个按钮时的样式*/
+.zmy-lang-btn {
+  width: 95%;
+}
+
+/**
+ *  
+ */
+
+/*驳回原因弹窗样式*/
+.zmy-reason-contain {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 101;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.zmy-reason-bg {
+  width: 100%;
+  flex: 1;
+}
+.zmy-inner-content {
+  width: 100%;
+  height: 438rpx;
+  background: #fff;
+  padding: 46rpx 34rpx 34rpx 32rpx;
+}
+.zmy-reason-title {
+  width: 100%;
+  padding-left: 24rpx;
+  font-size: 34rpx;
+  color: #353535;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+}
+.zmy-reasons {
+  width: 100%;
+  height: 190rpx;
+  border-radius: 8px;
+  border: 1rpx #eeeeee solid;
+  padding: 20rpx 20rpx;
+  font-size: 28rpx;
+  color: #444;
+  margin-bottom: 25rpx;
+}
+.zmy-reason-btn-contain {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.zmy-reason-cancel,
+.zmy-reason-sure {
+  width: 110rpx;
+  height: 64rpx;
+  font-size: 34rpx;
+  line-height: 64rpx;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  color: #d3d3d3;
+}
+.zmy-reason-sure {
+  margin-left: 24rpx;
+  background: #5f9dfe;
+  color: #fff;
+}
+
+/*编辑弹框样式*/
+.zmy-opr-contain {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.zmy-opr-content {
+  width: 60%;
+  height: 100rpx;
+  display: flex;
+}
+.zmy-opr {
+  flex: 1;
+  background: #fff;
+  border-radius: 12rpx;
+  line-height: 100rpx;
+  border: none;
+  font-size: 28rpx;
+  color: #5f9efd;
+}
