@@ -1,6 +1,7 @@
 /**
  * 页面底部操按钮的样式
  */
+@import '/assets/css/base.wxss';
 
 /*操作按钮盒子的样式*/
 .zmy-btn-contain {

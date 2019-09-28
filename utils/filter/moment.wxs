@@ -1,29 +1,53 @@
+/***
+ * @fileName: 
+ * @file: 
+ * @Date: 2019-09-24 23:52:08
+ * @author: manyao.zhu
+ */
 /*
  * @FileName: 
  * @Author: 朱满要
- * @Date: 2019-08-19 18:12:33
+ * @params: {type} date: 年月日  datetime: 年月日时分  year-month: 年月  time: 时分 （选填默认：date）
+ * @Date: 2019-08-19 18:12:33 
  */
 var DateFr = {
 
-  getDate: function (time, splitStr) {
+  getDate: function (time, splitStr, type = 'date') {
+    // console.log('type',type)
     if (!time) return '';
-    time = Number(time);
-    var date = getDate(time);
-    var M = date.getMonth() + 1;
-    var y = date.getFullYear();
-    var d = date.getDate();
-
+    // 这里的判断是因为年月日是时间戳，时分是字符串
+    if (type !== 'time') {
+      time = Number(time);
+      var date = getDate(time);
+      var M = date.getMonth() + 1;
+      var y = date.getFullYear();
+      var d = date.getDate();
+      var h = date.getHours();
+      var m = date.getMinutes();
+    }
     if (M < 10) M = "0" + M;
     if (d < 10) d = "0" + d;
+    if (h < 10) h = "0" + h;
+    if (m < 10) m = "0" + m;
 
-    if (splitStr)
-      return y +splitStr + M +splitStr+d;
-    else
-      return {
+    if (splitStr) {
+      // 这里的判断是对时间格式的处理
+      if (type === 'date') {
+        return y +splitStr + M +splitStr+d;
+      } else if (type === 'datetime') {
+        return y +splitStr + M +splitStr+d + " " + h + ":" + m;
+      } else if (type ==='year-month') {
+        return y +splitStr + M ;
+      } else {
+        return time;
+      }
+    } else {
+        return {
         y: y,
         M: M,
         d: d
       };
+    }
   },
   
   initSecond: function (time) {
