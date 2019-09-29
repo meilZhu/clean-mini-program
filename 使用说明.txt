@@ -1,4 +1,4 @@
-1、引入的ui库： 这里我们使用的是有赞ui。 地址：https://youzan.github.io/vant-weapp/#/intro
+1、引入的ui库： 这里我们使用的是有赞ui。 地址：https://youzan.github.io/vant-weapp/#/intro 
 
 2、公共样式： 这里我将一些共用的样式写在css文件夹下（a、若想全局使用，我们可以直接在app.wxss中引入：@import '/assets/css/...'; 
             b、若在组件中使用，可以直接在组件中引入）

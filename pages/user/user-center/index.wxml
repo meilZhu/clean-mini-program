@@ -1,6 +1,10 @@
 <!--pages/user/user-center/index.wxml-->
 <view class="zmy-opr">
   <view class="zmy-cell">
-    <zmy-date-picker></zmy-date-picker>
+    <zmy-date-picker
+      prop-title="测试标题"
+      prop-date="{{time}}"
+      bindconfirmDate="confirmDate"
+    ></zmy-date-picker>
   </view>
 </view>

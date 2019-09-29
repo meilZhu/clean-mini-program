@@ -1,3 +1,4 @@
+@import '/assets/css/base.wxss';
 /*勾选的外壳*/
 .zmy-check-contain {
   width: 100%;

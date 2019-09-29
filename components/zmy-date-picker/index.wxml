@@ -1,2 +1,22 @@
 <!--components/zmy-date-picker/index.wxml-->
-试试
+<wxs module="dateFr" src="../../utils/filter/moment.wxs"></wxs>
+<view class="zmy-list">
+  <text class="zmy-title">{{title}}</text>
+  <input
+    type="text"
+    class="zmy-input"
+    value="{{dateFr.getDate(date, '-', type)}}"
+    placeholder="请选择时间"
+    disabled="{{true}}"
+  />
+  <image class="zmy-date" src="/assets/plugin-img/date.png" bindtap="showDatePicker"></image>
+</view>
+<view class="zmy-fixed-contain" wx:if="{{showPicker}}">
+  <van-datetime-picker
+    type="{{type}}"
+    value="{{ currentDate }}"
+    min-date="{{ minDate }}"
+    bind:confirm="confirmDate"
+    bind:cancel="cancelDate"
+  />
+</view>
