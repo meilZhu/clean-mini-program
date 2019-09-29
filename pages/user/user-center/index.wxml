@@ -1,2 +1,6 @@
 <!--pages/user/user-center/index.wxml-->
-<zmy-date-picker></zmy-date-picker>
+<view class="zmy-opr">
+  <view class="zmy-cell">
+    <zmy-date-picker></zmy-date-picker>
+  </view>
+</view>

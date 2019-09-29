@@ -3,25 +3,18 @@
     "pages/user/user-center/index",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/menu/index",
-    "pages/test/index"
+    "pages/menu/index"
   ],
   "subPackages": [
     {
       "root": "pages/supplier/",
       "name": "supplier",
-      "pages": [
-        "supplier-add/index",
-        "supplier-detail/index"
-      ]
+      "pages": ["supplier-add/index", "supplier-detail/index"]
     },
     {
       "root": "pages/procure/",
       "name": "procure",
-      "pages": [
-        "procure-add/index",
-        "procure-detail/index"
-      ]
+      "pages": ["procure-add/index", "procure-detail/index"]
     }
   ],
   "window": {
