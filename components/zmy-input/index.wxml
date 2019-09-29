@@ -1,0 +1,16 @@
+<!--components/zmy-input/index.wxml-->
+<view class="zmy-list {{errTips? 'zmy-err-list': ''}}">
+  <text class="zmy-title">{{label}}</text>
+  <view class="zmy-name-contain">
+    <input
+      class="zmy-input"
+      type="text"
+      value="{{text}}"
+      disabled="{{readonly}}"
+      maxlength="{{maxlength}}"
+      placeholder="{{placeholder}}"
+    />
+    <text class="zmy-input-tips" wx:if="{{errTips}}">{{errTips}}</text>
+  </view>
+  <van-icon class="zmy-input-icon" name="arrow"></van-icon>
+</view>

@@ -1,0 +1,22 @@
+/* components/zmy-textarea/index.wxss */
+@import '/assets/css/base.wxss';
+
+.zmy-textarea-contian {
+  width: 100%;
+  background: #fff;
+}
+/*定义文本域的样式*/
+.zmy-textarea {
+  width: 100%;
+  padding: 20rpx 30rpx;
+  font-size: 28rpx;
+}
+
+/*消除view与textarea的误差*/
+.private-textarea {
+  padding-top: 16rpx;
+}
+/*当内容为空时，view的样式*/
+.light-textarea {
+  color: #777;
+}

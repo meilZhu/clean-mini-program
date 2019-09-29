@@ -7,4 +7,17 @@
       bindconfirmDate="confirmDate"
     ></zmy-date-picker>
   </view>
+  <view class="reason-opr">
+    <zmy-textarea
+      bindinputTextarea="inputTextarea"
+      prop-text="{{reason}}"
+      prop-height="100"
+      prop-maxlength="100"
+      prop-readonly="{{readonly}}"
+      prop-placeholder="请输入审批意见"
+    ></zmy-textarea>
+  </view>
+  <view class="zmy-cell">
+    <zmy-input></zmy-input>
+  </view>
 </view>

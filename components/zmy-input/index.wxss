@@ -1,0 +1,27 @@
+/* components/zmy-input/index.wxss */
+@import '/assets/css/base.wxss';
+@import '/assets/css/common-line.wxss';
+
+/*有错误提示时的样式*/
+.zmy-err-list {
+  align-items: flex-start;
+}
+.zmy-name-contain {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.zmy-input {
+  width: 100%;
+  height: 70rpx;
+}
+
+/*错误提示信息的样式*/
+.zmy-input-tips {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+  font-size: 24rpx;
+  color: #e64340;
+}

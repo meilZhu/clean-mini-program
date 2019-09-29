@@ -1,5 +1,5 @@
 /***
- * @fileName:
+ * @fileName: 时间选择器组件
  * @file:
  * @Date: 2019-09-24 23:52:07
  * @author: manyao.zhu

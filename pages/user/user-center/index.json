@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "zmy-date-picker": "/components/zmy-date-picker/index"
+    "zmy-date-picker": "/components/zmy-date-picker/index",
+    "zmy-textarea": "/components/zmy-textarea/index",
+    "zmy-input": "/components/zmy-input/index"
   }
 }

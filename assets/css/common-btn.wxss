@@ -91,7 +91,7 @@
 .zmy-reason-sure {
   width: 110rpx;
   height: 64rpx;
-  font-size: 34rpx;
+  font-size: 28rpx;
   line-height: 64rpx;
   background: #fff;
   margin: 0;

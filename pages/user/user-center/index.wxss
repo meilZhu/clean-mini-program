@@ -1,3 +1,7 @@
 /* pages/user/user-center/index.wxss */
 @import '/assets/css/base';
 @import '/assets/css/common-line.wxss';
+
+.reason-opr {
+  border: 1rpx #ccc solid;
+}

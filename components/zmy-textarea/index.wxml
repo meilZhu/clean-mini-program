@@ -1,0 +1,27 @@
+<!--components/zmy-textarea/index.wxml-->
+<view class="zmy-textarea-contian" wx:if="{{!readonly}}">
+  <textarea
+    wx:if="{{showTextarea}}"
+    class="zmy-textarea"
+    placeholder="{{placeholder}}"
+    style="height:{{height}}rpx;"
+    value="{{textarea}}"
+    focus="{{onFocus}}"
+    bindblur="triggerTextarea"
+    bindinput="textareaInput"
+    maxlength="{{maxlength}}"
+  ></textarea>
+  <view
+    class="zmy-textarea private-textarea {{!textarea? 'light-textarea': ''}}"
+    wx:else
+    bindtap="triggerTextarea"
+    style="height: {{height}}rpx;"
+  >
+    {{textarea || placeholder}}
+  </view>
+</view>
+<view class="zmy-textarea-contian" wx:else>
+  <view class="zmy-textarea" style="height: {{height}}rpx;">
+    {{textarea || placeholder}}
+  </view>
+</view>

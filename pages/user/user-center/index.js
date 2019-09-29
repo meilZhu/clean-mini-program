@@ -11,13 +11,21 @@ Page({
    */
   data: {
     // 时间
-    time: null
+    time: null,
+    // 理由
+    reason: null
   },
 
   //
   confirmDate(evt) {
     this.setData({
       time: evt.detail.date
+    });
+  },
+
+  inputTextarea(evt) {
+    this.setData({
+      reason: evt.detail
     });
   },
 
