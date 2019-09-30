@@ -4,11 +4,12 @@
   <view class="zmy-name-contain">
     <input
       class="zmy-input"
-      type="text"
+      type="{{type}}"
       value="{{text}}"
       disabled="{{readonly}}"
       maxlength="{{maxlength}}"
       placeholder="{{placeholder}}"
+      bindinput="textInput"
     />
     <text class="zmy-input-tips" wx:if="{{errTips}}">{{errTips}}</text>
   </view>

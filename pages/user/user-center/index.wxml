@@ -1,4 +1,5 @@
 <!--pages/user/user-center/index.wxml-->
+<wxs module="moneyFr" src="../../../utils/filter/format-money.wxs"></wxs>
 <view class="zmy-opr">
   <view class="zmy-cell">
     <zmy-date-picker
@@ -18,6 +19,7 @@
     ></zmy-textarea>
   </view>
   <view class="zmy-cell">
-    <zmy-input></zmy-input>
+    <zmy-input prop-type="digit"></zmy-input>
   </view>
+  <view class="zmy-cell">{{moneyFr.format(1233445600, '￥')}}</view>
 </view>

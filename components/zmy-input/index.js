@@ -57,13 +57,24 @@ Component({
     /**
      * 输入框要校验的类型 （选传， 默认： default）
      */
-    propType: {
+    propVerifyType: {
       type: String,
       value: 'default'
-    }
+    },
     /**
      * 输入框所在列表的索引  （选传， 默认： 0）
      */
+    propIndex: {
+      type: Number,
+      value: 0
+    },
+    /**
+     * 输入框的类型  （选传， 默认text， 还有 password）
+     */
+    propType: {
+      type: String,
+      value: 'text'
+    }
   },
 
   // 数据监听
@@ -138,5 +149,8 @@ Component({
   /**
    * 组件的方法列表
    */
-  methods: {}
+  methods: {
+    // 输入框的输入事件
+    textInput(evt) {}
+  }
 });

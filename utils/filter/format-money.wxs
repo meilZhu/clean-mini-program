@@ -1,0 +1,31 @@
+/***
+ * @FileName:  封装金额三位用逗号隔开 ，且后面保留两位小数的过滤器
+ * @Author: manyao.zhu
+ * @Date: 2019-09-30 09:18:08
+ * @author: manyao.zhu
+ */
+
+/***
+ * @@description:  封装的金额过滤器
+ * @@param: {num,type} num 为传递过来的数字，  type 金额的类型
+ * @@method: 
+ */ 
+var moneyFr = {
+  format: function(num, type = '') {
+    if(!num || num === '0') return '0.00';
+    // 获取两位小数
+    num = Number(num).toFixed(2)
+    num = num.toString();
+    var arr = num.split('.')
+    num = arr[0]
+    // 得到正则表达式
+    var reg = getRegExp('(\d)(?=(\d{3})+$)', "g")
+    num = num.replace(reg, "$1,");
+    var decimals = arr[1]
+    return type + num + '.' + decimals
+  }
+}
+
+module.exports={
+  format: moneyFr.format
+}

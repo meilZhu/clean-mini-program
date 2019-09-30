@@ -1,5 +1,5 @@
 /*
- * @FileName: 
+ * @FileName:
  * @Author: 朱满要
  * @Date: 2019-08-19 18:45:51
  */
@@ -19,7 +19,7 @@ const Pattern = {
   isPassword: /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$/,
   isAuthCode: /^[0-9]{6}$/,
   isTelAndMobile: /^(1[3|4|5|7|8|9][\d]{9}|0[\d]{2,3}-[\d]{7,8}|400[-]?[\d]{3}[-]?[\d]{4})$/,
-  isEmail: /^(?=.{1,254}$)(?=.{1,64}@)[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+(\.[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+)*@[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?(\.[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?)*$/,
+  isEmail: /^(?=.{1,254}$)(?=.{1,64}@)[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+(\.[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+)*@[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?(\.[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?)*$/
 };
 
 // 错误信息
@@ -141,7 +141,7 @@ export default {
    * @param obj 检验对象
    * @returns {boolean}
    */
-  isEmptyObj: (obj) => {
+  isEmptyObj: obj => {
     return Object.keys(obj).length === 0;
   },
   /**
@@ -185,4 +185,5 @@ export default {
   },
 
   ...ERROR_TIPS,
+  ...Pattern
 };
