@@ -22,4 +22,7 @@
     <zmy-input prop-type="digit"></zmy-input>
   </view>
   <view class="zmy-cell">{{moneyFr.format(1233445600, '￥')}}</view>
+  <view class="zmy-cell">
+    <!-- <zmy-rich-text prop-url="{{path}}" prop-param="{{param}}"></zmy-rich-text> -->
+  </view>
 </view>

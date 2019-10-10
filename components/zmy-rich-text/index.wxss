@@ -1,1 +1,7 @@
 /* components/zmy-rich-text/index.wxss */
+@import '/utils/wxParse/wxParse';
+@import '/assets/css/base.wxss';
+
+.zmy-rich-text {
+  width: 100%;
+}
