@@ -82,7 +82,7 @@ const isEmpty = data => {
   return (data && data.length > 0) || data === 0 ? false : true;
 };
 
-// 所谓防抖，就是在时间触发后在规定的几秒内，函数只执行一次， 若在这几秒内又出发了事件，则重新计算该函数的执行时间
+// 所谓防抖，就是在事件触发后在规定的几秒内，函数只执行一次， 若在这几秒内又出发了事件，则重新计算该函数的执行时间
 // 防抖（非立即执行版） (这里需要注意在页面初始化是将其赋值一次，即先调用一次)
 const debounceNotNow = (fn, wait) => {
   let timeout = null;
