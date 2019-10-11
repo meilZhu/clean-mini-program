@@ -1,6 +1,88 @@
 <!--pages/user/user-center/index.wxml-->
 <wxs module="moneyFr" src="../../../utils/filter/format-money.wxs"></wxs>
 <view class="zmy-opr">
+  <zmy-header
+    prop-text="{{searchText}}"
+    prop-tab="{{tabs}}"
+    prop-placeholder="请输入想搜索的内容"
+    prop-status="{{isFixed}}"
+    bindsearchEvent="searchEvent"
+    bindtabEvent="tabEvent"
+  >
+    <view slot="select">哈哈哈哈</view>
+  </zmy-header>
+  <view class="zmy-cell">
+    <zmy-date-picker
+      prop-title="测试标题"
+      prop-date="{{time}}"
+      bindconfirmDate="confirmDate"
+    ></zmy-date-picker>
+  </view>
+  <view class="reason-opr">
+    <zmy-textarea
+      bindinputTextarea="inputTextarea"
+      prop-text="{{reason}}"
+      prop-height="100"
+      prop-maxlength="100"
+      prop-readonly="{{readonly}}"
+      prop-placeholder="请输入审批意见"
+    ></zmy-textarea>
+  </view>
+  <view class="zmy-cell">
+    <zmy-input prop-type="digit"></zmy-input>
+  </view>
+  <view class="zmy-cell">{{moneyFr.format(1233445600, '￥')}}</view>
+  <view class="zmy-cell">
+    <!-- <zmy-rich-text prop-url="{{path}}" prop-param="{{param}}"></zmy-rich-text> -->
+  </view>
+  <view class="zmy-cell">
+    <zmy-date-picker
+      prop-title="测试标题"
+      prop-date="{{time}}"
+      bindconfirmDate="confirmDate"
+    ></zmy-date-picker>
+  </view>
+  <view class="reason-opr">
+    <zmy-textarea
+      bindinputTextarea="inputTextarea"
+      prop-text="{{reason}}"
+      prop-height="100"
+      prop-maxlength="100"
+      prop-readonly="{{readonly}}"
+      prop-placeholder="请输入审批意见"
+    ></zmy-textarea>
+  </view>
+  <view class="zmy-cell">
+    <zmy-input prop-type="digit"></zmy-input>
+  </view>
+  <view class="zmy-cell">{{moneyFr.format(1233445600, '￥')}}</view>
+  <view class="zmy-cell">
+    <!-- <zmy-rich-text prop-url="{{path}}" prop-param="{{param}}"></zmy-rich-text> -->
+  </view>
+  <view class="zmy-cell">
+    <zmy-date-picker
+      prop-title="测试标题"
+      prop-date="{{time}}"
+      bindconfirmDate="confirmDate"
+    ></zmy-date-picker>
+  </view>
+  <view class="reason-opr">
+    <zmy-textarea
+      bindinputTextarea="inputTextarea"
+      prop-text="{{reason}}"
+      prop-height="100"
+      prop-maxlength="100"
+      prop-readonly="{{readonly}}"
+      prop-placeholder="请输入审批意见"
+    ></zmy-textarea>
+  </view>
+  <view class="zmy-cell">
+    <zmy-input prop-type="digit"></zmy-input>
+  </view>
+  <view class="zmy-cell">{{moneyFr.format(1233445600, '￥')}}</view>
+  <view class="zmy-cell">
+    <!-- <zmy-rich-text prop-url="{{path}}" prop-param="{{param}}"></zmy-rich-text> -->
+  </view>
   <view class="zmy-cell">
     <zmy-date-picker
       prop-title="测试标题"

@@ -7,7 +7,7 @@
 // components/zmy-rich-text/index.js
 
 const app = getApp();
-var WxParse = require('../../utils/wxParse/wxParse.js');
+var WxParse = require('../../miniprogram_npm/wxParse/wxParse.js');
 
 Component({
   /**

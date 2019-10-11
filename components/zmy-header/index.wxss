@@ -1,1 +1,26 @@
 /* components/zmy-header/index.wxss */
+.zmy-search .van-search .van-search__content {
+  border-radius: 27rpx !important;
+}
+.van-search .van-cell {
+  border-bottom: none;
+}
+.btn-contain {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  /* margin-bottom: 30rpx; */
+}
+.btn-contain-fixed {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 30rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.van-tabs__line .van-tabs__line {
+  background-color: aqua !important;
+}

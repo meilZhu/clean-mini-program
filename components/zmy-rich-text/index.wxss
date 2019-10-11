@@ -1,5 +1,5 @@
 /* components/zmy-rich-text/index.wxss */
-@import '/utils/wxParse/wxParse';
+@import '/miniprogram_npm/wxParse/wxParse.wxss';
 @import '/assets/css/base.wxss';
 
 .zmy-rich-text {

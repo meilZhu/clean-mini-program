@@ -1,5 +1,5 @@
 <!--components/zmy-rich-text/index.wxml-->
 <view class="zmy-rich-text">
-  <import src="../../utils/wxParse/wxParse" />
+  <import src="../../miniprogram_npm/wxParse/wxParse.wxml" />
   <template is="wxParse" data="{{wxParseData:notice.nodes}}" />
 </view>
