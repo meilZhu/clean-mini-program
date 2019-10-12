@@ -6,10 +6,11 @@
     prop-tab="{{tabs}}"
     prop-placeholder="请输入想搜索的内容"
     prop-status="{{isFixed}}"
+    prop-hasTab="{{false}}"
     bindsearchEvent="searchEvent"
     bindtabEvent="tabEvent"
   >
-    <view slot="select">哈哈哈哈</view>
+    <view slot="select" bindtap="show">哈哈哈哈</view>
   </zmy-header>
   <view class="zmy-cell">
     <zmy-date-picker

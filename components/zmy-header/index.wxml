@@ -26,9 +26,9 @@
     </view>
   </view>
   <!--没有tab按钮的头部-->
-  <view class="header" wx:else>
+  <view class="header {{isFixed? 'btn-contain-fixed': 'btn-contain'}}" wx:else>
     <van-search
-      class="zmy-search {{isFixed? 'btn-contain-fixed': 'btn-contain'}}"
+      class="zmy-search"
       value="{{ searchText }}"
       maxlength="30"
       placeholder="{{placeholder}}"

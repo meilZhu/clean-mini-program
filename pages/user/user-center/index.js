@@ -52,7 +52,7 @@ Page({
 
   //
   onPageScroll: function(ev) {
-    if (ev.scrollTop > 54) {
+    if (ev.scrollTop > 0) {
       this.setData({
         isFixed: true
       });
@@ -61,6 +61,29 @@ Page({
         isFixed: false
       });
     }
+  },
+
+  show() {
+    this.hhh('要笑');
+  },
+
+  close() {
+    console.log(11111);
+  },
+
+  hhh(title, succ, fail) {
+    wx.showModal({
+      title: '提示信息',
+      content: `确定${title}吗？`,
+      confirmColor: '#5F9EFD',
+      success: function(evt) {
+        if (evt.confirm && succ) {
+          succ();
+        } else if (evt.cancel && fail) {
+          fail();
+        }
+      }
+    });
   },
 
   /**
