@@ -9,12 +9,14 @@ import http from './fetch/http';
 import util from './plugins/util';
 import validator from './plugins/validator';
 import fileSrv from './service/file-service';
+import tableSrv from './service/table-page-service';
 
 const zmy = {
   http,
   util,
   validator,
-  fileSrv
+  fileSrv,
+  tableSrv
 };
 
 export default zmy;

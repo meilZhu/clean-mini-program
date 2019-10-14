@@ -1,0 +1,15 @@
+/***
+ * @FileName: 权限判断展示按钮的过滤器
+ * @Author: manyao.zhu
+ * @Date: 2019-10-14 11:45:02
+ */
+var Permission = {
+  has: function(bool) {
+    if (typeof bool !== 'boolean' || typeof bool == 'undefined') return false;
+    return !bool;
+  },
+};
+
+module.exports = {
+  has: Permission.has,
+};
