@@ -25,7 +25,11 @@ Page({
         index: 1
       }
     ],
-    isFixed: false
+    isFixed: false,
+    // 右侧滑块的宽
+    rightWidth: 65,
+    // 左侧滑块的宽
+    leftWidth: 0
   },
 
   //

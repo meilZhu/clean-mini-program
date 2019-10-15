@@ -1,0 +1,32 @@
+<!--components/zmy-picture-preview/index.wxml-->
+<view class="zmy-preview-contain" bindtap="closeImgContain">
+  <view class="zmy-inner-contain">
+    <!--一张图片的加载-->
+    <view class="zmy-single-content" wx:if="{{single}}">
+      <image
+        bindload="singleImgLoad"
+        style="width:{{ imgSize.width }}rpx; height:{{ imgSize.height }}rpx;"
+        src="{{imgSrc}}"
+      ></image>
+    </view>
+    <!--多张图片的加载-->
+    <view class="zmy-many-content" wx:if="{{!single}}">
+      <view class="zmy-content" wx:for="{{images}}" wx:key="{{index}}">
+        <image
+          class="zmy-image"
+          bindload="manyImgLoad"
+          style="width:{{ imgSize[index].width }}rpx; height:{{ imgSize[index].height }}rpx;"
+          data-index="{{index}}"
+          src="{{item.src}}"
+        ></image>
+      </view>
+    </view>
+    <!--删除按钮-->
+    <image
+      class="zmy-image-remove"
+      src="/assets/img/user/remove.png"
+      catchtap="remove"
+      wx:if="{{showRemoveBtn}}"
+    ></image>
+  </view>
+</view>

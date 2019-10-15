@@ -1,0 +1,65 @@
+/* components/zmy-picture-preview/index.wxss */
+@import '/assets/css/base.wxss';
+
+.zmy-preview-contain {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 10000;
+}
+
+.zmy-inner-contain {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.zmy-single-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30rpx;
+}
+
+.zmy-image-remove {
+  width: 36rpx;
+  height: 40rpx;
+  position: absolute;
+  left: 50%;
+  margin-left: -18rpx;
+  bottom: 50rpx;
+}
+
+.zmy-image-remove {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.zmy-many-content {
+  width: auto;
+  background: none;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.zmy-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zmy-image {
+  margin: 0 30rpx;
+}

@@ -13,66 +13,94 @@ import CONFIG from '../fetch/config';
  * @param {url}  上传图片的路径
  * @return:  返回的是上传的图片
  */
-const uploadImage = (url = '') => {
+const uploadFile = (url, path) => {
   return new Promise((resolve, reject) => {
-    // 这里封装请求方法，用于返回请求后的数据，用于处理后续操作
     function uploadRequestApi() {
       const app = getApp();
-      wx.chooseImage({
-        count: 4,
-        sizeType: ['original', 'compressed'],
-        sourceType: ['album', 'camera'],
-        success: result => {
-          console.log('-------选择文件接口-------');
-          console.log(result);
-          let imgs = result.tempFilePaths;
-          for (let i = 0; i < imgs.length; i++) {
-            wx.uploadFile({
-              url: `${CONFIG.BASE_API}${url}`,
-              filePath: imgs[i],
-              name: 'fileInput',
-              header: {
-                'Content-Type': 'multipart/form-data',
-                Authorization: `Bearer ${app.globalData.accessToken}`
-              },
-              // 这里根据不同公司定义传递的内容而定
-              formData: {
-                fileInputName: 'fileInput'
-              },
-              success: res => {
-                let data = JSON.parse(res.data);
-                console.log('-------上传文件接口--------');
-                console.log(data);
-                if (data.status) {
-                  resolve(data);
-                } else {
-                  resolve(data);
-                  if (String(data.code) === '1002') {
-                    wx.showToast({
-                      title: '账号过期，正在重新登录。',
-                      duration: 1000,
-                      icon: 'none'
-                    });
-                    app.globalData.accessToken = null;
-                    app.globalData.wxLogin().then(() => {
-                      uploadRequestApi();
-                    });
-                    return;
-                  }
-                  wx.showToast({
-                    title: res.data.messages,
-                    duration: 2000,
-                    icon: 'none'
-                  });
-                  console.log('出现错误了', res);
-                }
-              }
+      wx.uploadFile({
+        url: `${CONFIG.BASE_API}${url}`,
+        filePath: path,
+        name: 'fileInput',
+        header: {
+          'Content-Type': 'multipart/form-data',
+          Authorization: `Bearer ${app.globalData.accessToken}`
+        },
+        // 这里根据不同公司定义传递的内容而定
+        formData: {
+          fileInputName: 'fileInput'
+        },
+        success: res => {
+          let data = JSON.parse(res.data);
+          console.log('-------上传文件接口--------');
+          console.log(data);
+          if (data.status) {
+            resolve(data);
+          } else {
+            resolve(data);
+            if (String(data.code) === '1002') {
+              wx.showToast({
+                title: '账号过期，正在重新登录。',
+                duration: 1000,
+                icon: 'none'
+              });
+              app.globalData.accessToken = null;
+              app.globalData.wxLogin().then(() => {
+                uploadRequestApi();
+              });
+              return;
+            }
+            wx.showToast({
+              title: res.data.messages,
+              duration: 2000,
+              icon: 'none'
             });
+            console.log('出现错误了', res);
           }
         }
       });
     }
     uploadRequestApi();
+  });
+};
+
+/***
+ * @description: 选择图片的方法封装
+ * @param {num} 最多可选多少个 默认：4  （最大是9个）
+ * @method: chooseImage
+ * @return: 返回的选择图片之后的临时路径  [数组类型]
+ */
+const chooseImage = (num = 4) => {
+  return new Promise((resolve, reject) => {
+    wx.chooseImage({
+      count: num,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: result => {
+        let imgPaths = result.tempFilePaths;
+        resolve(imgPaths);
+      }
+    });
+  });
+};
+
+/***
+ * @description: 选择客服端文件的方法封装
+ * @param {num, type}  num：选择的数量  type: 文件类型
+ * @method: chooseMessageFile
+ * @return:
+ */
+const chooseMessageFile = (type = 'image', num = 4) => {
+  return new Promise((resolve, reject) => {
+    wx.chooseMessageFile({
+      count: num,
+      type: type,
+      success(res) {
+        console.log(res);
+        // tempFiles 为选择文件后储存文件的对象的一个数组
+        const tempFilePaths = res.tempFiles;
+        resolve(tempFilePaths);
+      }
+    });
   });
 };
 
@@ -252,7 +280,9 @@ function doPreviewFile(suffixName, id, path) {
 }
 
 module.exports = {
-  uploadImage,
+  uploadFile,
+  chooseImage,
+  chooseMessageFile,
   downloadFile,
   saveImageToAlbum,
   preview

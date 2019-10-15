@@ -2,4 +2,5 @@
 <view class="zmy-rich-text">
   <import src="../../miniprogram_npm/wxParse/wxParse.wxml" />
   <template is="wxParse" data="{{wxParseData:notice.nodes}}" />
+  <slot></slot>
 </view>

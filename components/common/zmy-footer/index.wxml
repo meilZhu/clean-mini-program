@@ -1,5 +1,5 @@
 <!--components/zmy-footer/index.wxml-->
-<wxs module="Permission" src="../../utils/filter/permission-pipe.wxs"></wxs>
+<wxs module="Permission" src="../../../utils/filter/permission-pipe.wxs"></wxs>
 <view class="zmy-btn-contain">
   <view class="btn-content" wx:if="{{btns.length === 2}}">
     <button

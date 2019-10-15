@@ -1,5 +1,5 @@
 <!--components/zmy-date-picker/index.wxml-->
-<wxs module="dateFr" src="../../utils/filter/moment.wxs"></wxs>
+<wxs module="dateFr" src="../../../utils/filter/moment.wxs"></wxs>
 <view class="zmy-list">
   <text class="zmy-title">{{title}}</text>
   <input

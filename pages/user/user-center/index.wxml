@@ -36,76 +36,7 @@
   <view class="zmy-cell">
     <!-- <zmy-rich-text prop-url="{{path}}" prop-param="{{param}}"></zmy-rich-text> -->
   </view>
-  <view class="zmy-cell">
-    <zmy-date-picker
-      prop-title="测试标题"
-      prop-date="{{time}}"
-      bindconfirmDate="confirmDate"
-    ></zmy-date-picker>
-  </view>
-  <view class="reason-opr">
-    <zmy-textarea
-      bindinputTextarea="inputTextarea"
-      prop-text="{{reason}}"
-      prop-height="100"
-      prop-maxlength="100"
-      prop-readonly="{{readonly}}"
-      prop-placeholder="请输入审批意见"
-    ></zmy-textarea>
-  </view>
-  <view class="zmy-cell">
-    <zmy-input prop-type="digit"></zmy-input>
-  </view>
-  <view class="zmy-cell">{{moneyFr.format(1233445600, '￥')}}</view>
-  <view class="zmy-cell">
-    <!-- <zmy-rich-text prop-url="{{path}}" prop-param="{{param}}"></zmy-rich-text> -->
-  </view>
-  <view class="zmy-cell">
-    <zmy-date-picker
-      prop-title="测试标题"
-      prop-date="{{time}}"
-      bindconfirmDate="confirmDate"
-    ></zmy-date-picker>
-  </view>
-  <view class="reason-opr">
-    <zmy-textarea
-      bindinputTextarea="inputTextarea"
-      prop-text="{{reason}}"
-      prop-height="100"
-      prop-maxlength="100"
-      prop-readonly="{{readonly}}"
-      prop-placeholder="请输入审批意见"
-    ></zmy-textarea>
-  </view>
-  <view class="zmy-cell">
-    <zmy-input prop-type="digit"></zmy-input>
-  </view>
-  <view class="zmy-cell">{{moneyFr.format(1233445600, '￥')}}</view>
-  <view class="zmy-cell">
-    <!-- <zmy-rich-text prop-url="{{path}}" prop-param="{{param}}"></zmy-rich-text> -->
-  </view>
-  <view class="zmy-cell">
-    <zmy-date-picker
-      prop-title="测试标题"
-      prop-date="{{time}}"
-      bindconfirmDate="confirmDate"
-    ></zmy-date-picker>
-  </view>
-  <view class="reason-opr">
-    <zmy-textarea
-      bindinputTextarea="inputTextarea"
-      prop-text="{{reason}}"
-      prop-height="100"
-      prop-maxlength="100"
-      prop-readonly="{{readonly}}"
-      prop-placeholder="请输入审批意见"
-    ></zmy-textarea>
-  </view>
-  <view class="zmy-cell">
-    <zmy-input prop-type="digit"></zmy-input>
-  </view>
-  <view class="zmy-cell">{{moneyFr.format(1233445600, '￥')}}</view>
-  <view class="zmy-cell">
-    <!-- <zmy-rich-text prop-url="{{path}}" prop-param="{{param}}"></zmy-rich-text> -->
+  <view class="contain">
+    <zmy-remove-block></zmy-remove-block>
   </view>
 </view>

@@ -1,9 +1,11 @@
 {
   "usingComponents": {
-    "zmy-header": "/components/zmy-header/index",
-    "zmy-date-picker": "/components/zmy-date-picker/index",
-    "zmy-textarea": "/components/zmy-textarea/index",
-    "zmy-input": "/components/zmy-input/index",
-    "zmy-rich-text": "/components/zmy-rich-text/index"
+    "zmy-header": "/components/common/zmy-header/index",
+    "zmy-date-picker": "/components/common/zmy-date-picker/index",
+    "zmy-textarea": "/components/common/zmy-textarea/index",
+    "zmy-input": "/components/common/zmy-input/index",
+    "zmy-rich-text": "/components/common/zmy-rich-text/index",
+    "zmy-remove-block": "/components/common/zmy-remove-block/index",
+    "van-swipe-cell": "/miniprogram_npm/vant-weapp/swipe-cell/index"
   }
 }

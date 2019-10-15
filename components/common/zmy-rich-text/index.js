@@ -7,9 +7,12 @@
 // components/zmy-rich-text/index.js
 
 const app = getApp();
-var WxParse = require('../../miniprogram_npm/wxParse/wxParse.js');
+var WxParse = require('../../../miniprogram_npm/wxParse/wxParse.js');
 
 Component({
+  options: {
+    multipleSlots: true // 在组件定义时的选项中启用多slot支持(以及具名插槽)
+  },
   /**
    * 组件的属性列表
    */

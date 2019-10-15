@@ -5,3 +5,7 @@
 .reason-opr {
   border: 1rpx #ccc solid;
 }
+
+.contain {
+  padding: 20rpx;
+}
