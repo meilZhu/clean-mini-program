@@ -1,6 +1,40 @@
 <!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
+<view class="zmy-opr">
+  <!-- <block wx:for="{{logs}}" wx:for-item="log">
     <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+  </block> -->
+  <view class="zmy-contain">
+    <zmy-remove-block
+      prop-rightWidth="{{65}}"
+      data-index="{{1}}"
+      prop-leftWidth="{{0}}"
+      prop-rightAsync="{{true}}"
+      bindrightAsyncEvent="remove"
+    >
+      <view class="zmy-list-contain">
+        <view class="zmy-list">
+          <text class="zmy-title">你好</text>
+          <text class="zmy-name">hhhh </text>
+        </view>
+      </view>
+    </zmy-remove-block>
+    <zmy-remove-block
+      prop-leftAsync="{{true}}"
+      data-index="{{2}}"
+      bindleftAsyncEvent="like"
+      prop-leftText="喜欢"
+      bindrightUnAsyncEvent="unlike"
+      prop-rightText="不喜欢"
+    >
+      <view class="zmy-list-contain">
+        <view class="zmy-list">
+          <text class="zmy-title">你好</text>
+          <text class="zmy-name">hhhh </text>
+        </view>
+      </view>
+    </zmy-remove-block>
+  </view>
+  <view class="" hover-class="none" hover-stop-propagation="false">
+    hauigdiidsidasggaigdasg
+  </view>
 </view>

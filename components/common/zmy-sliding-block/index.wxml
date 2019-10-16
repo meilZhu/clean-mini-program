@@ -1,0 +1,25 @@
+<!--components/zmy-remove-block/index.wxml-->
+<view class="zmy-remove-block">
+  <van-swipe-cell
+    right-width="{{ rightWidth }}"
+    left-width="{{leftWidth}}"
+    async-close
+    bind:close="onRemove"
+  >
+    <view
+      slot="left"
+      class="zmy-remove"
+      style="width: {{leftWidth*2}}rpx; background: {{leftBgColor}}; font-size: {{fontSize}}rpx; color: {{leftColor}}"
+      >{{leftText}}</view
+    >
+    <van-cell-group>
+      <slot></slot>
+    </van-cell-group>
+    <view
+      slot="right"
+      class="zmy-remove"
+      style="width: {{rightWidth*2}}rpx; background: {{rightBgColor}}; font-size: {{fontSize}}rpx; color: {{rightColor}}"
+      >{{rightText}}</view
+    >
+  </van-swipe-cell>
+</view>

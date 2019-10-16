@@ -196,15 +196,6 @@
 .zmy-opr,
 .zmy-choose {
   width: 100%;
-  background: #f4f4f4;
   min-height: 100%;
-}
-
-/*数据存储的盒子的样式(以及详情时，没有曹组按钮的样式)*/
-.zmy-contain {
-  width: 100%;
-  padding: 20rpx 150rpx;
-}
-.zmy-detail-contain {
-  padding-bottom: 20rpx;
+  background: #f4f4f4;
 }

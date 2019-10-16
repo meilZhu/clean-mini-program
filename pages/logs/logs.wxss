@@ -1,8 +1,21 @@
-.log-list {
+@import '/assets/css/base.wxss';
+@import '/assets/css/common-line.wxss';
+/* .log-list {
   display: flex;
   flex-direction: column;
   padding: 40rpx;
 }
 .log-item {
   margin: 10rpx;
+} */
+.zmy-opr {
+  width: 100%;
+  min-height: 100%;
+  background: #f4f4f4;
+}
+.zmy-contain {
+  padding: 20rpx;
+}
+.zmy-list-contain {
+  margin-bottom: 0;
 }

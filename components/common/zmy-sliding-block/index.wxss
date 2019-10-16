@@ -1,15 +1,12 @@
 /* components/zmy-remove-block/index.wxss */
 @import '/assets/css/base.wxss';
-@import '/assets/css/common-line.wxss';
 
 .zmy-remove-block {
-  background: #fff;
+  width: 100%;
 }
 
 /*滑动删除样式的处理*/
 .zmy-remove {
-  background: #e64340;
-  width: 130rpx;
   height: 100%;
   color: #fff;
   text-align: center;

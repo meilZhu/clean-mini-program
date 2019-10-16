@@ -5,7 +5,6 @@
     "zmy-textarea": "/components/common/zmy-textarea/index",
     "zmy-input": "/components/common/zmy-input/index",
     "zmy-rich-text": "/components/common/zmy-rich-text/index",
-    "zmy-remove-block": "/components/common/zmy-remove-block/index",
-    "van-swipe-cell": "/miniprogram_npm/vant-weapp/swipe-cell/index"
+    "zmy-sliding-block": "/components/common/zmy-sliding-block/index"
   }
 }

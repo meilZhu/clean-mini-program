@@ -37,6 +37,13 @@
     <!-- <zmy-rich-text prop-url="{{path}}" prop-param="{{param}}"></zmy-rich-text> -->
   </view>
   <view class="contain">
-    <zmy-remove-block></zmy-remove-block>
+    <zmy-sliding-block>
+      <view class="zmy-list-contain">
+        <view class="zmy-list">
+          <text class="zmy-title">你好</text>
+          <text class="zmy-name">hhhh </text>
+        </view>
+      </view>
+    </zmy-sliding-block>
   </view>
 </view>

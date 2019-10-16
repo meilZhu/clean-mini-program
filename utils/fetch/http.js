@@ -1,31 +1,45 @@
+/***
+ * @FileName:
+ * @Author: manyao.zhu
+ * @Date: 2019-09-27 11:45:18
+ * @fileName:
+ * @file:
+ * @author: manyao.zhu
+ */
 /*
- * @FileName: 
+ * @FileName:
  * @Author: 朱满要
  * @Date: 2019-08-19 17:27:51
  */
-import CONFIG from './config'
+import CONFIG from './config';
 
-const http = ({url = '', param = {}, header = {}, showLoading = true, ...config} = {}) => {
+const http = ({
+  url = '',
+  param = {},
+  header = {},
+  showLoading = true,
+  ...config
+} = {}) => {
   toggleLoading(true, showLoading);
-  return new Promise( (resolve, reject) => {
-    function requestApi () {
+  return new Promise((resolve, reject) => {
+    function requestApi() {
       const app = getApp();
       if (app && app.globalData.accessToken) {
         header.Authorization = `Bearer ${app.globalData.accessToken}`;
       }
       wx.request({
         url: getUrl(url),
-        data: app.util.deleteEmptyObj(data),
+        data: app.util.deleteEmptyObj(param),
         header,
         ...config,
-        complate: (res) => {
+        complate: res => {
           toggleLoading(false, showLoading);
           if (res.statusCode >= 200 && res.statusCode < 300) {
             if (res.data.status) {
               // 这里是当 accessToken 失效时重新获取
               if (Number(res.data.code) === 1002) {
                 app.globalData.accessToken = null;
-                app.globalData.wxLogin().then((res) => {
+                app.globalData.wxLogin().then(res => {
                   requestApi();
                 });
               }
@@ -36,7 +50,7 @@ const http = ({url = '', param = {}, header = {}, showLoading = true, ...config}
               wx.showToast({
                 title: res.data.messages,
                 duration: 2000,
-                icon: 'none',
+                icon: 'none'
               });
               console.log('出现错误了', res);
               resolve(res.data);
@@ -48,21 +62,21 @@ const http = ({url = '', param = {}, header = {}, showLoading = true, ...config}
       });
     }
     requestApi();
-  })
+  });
 };
 
 const toggleLoading = (toggle, showLoading) => {
   if (!showLoading) return;
   if (toggle) {
     wx.showLoading({
-      title: '正在请求中..',
-    })
+      title: '正在请求中..'
+    });
   } else {
     wx.hideLoading();
   }
 };
 
-const getUrl = (url) => {
+const getUrl = url => {
   if (url.toLowerCase().indexOf('://') === -1) {
     url = CONFIG.BASE_API + url;
   } else {
@@ -71,26 +85,26 @@ const getUrl = (url) => {
   return url;
 };
 
-const get = (url, param= {}, showLoading = true) => {
+const get = (url, param = {}, showLoading = true) => {
   return http({
     url,
     param,
     method: 'get',
     header: {},
     showLoading: showLoading
-  })
+  });
 };
 
-const post = (url, param={}, showLoading = true) => {
+const post = (url, param = {}, showLoading = true) => {
   return http({
     url,
     param,
     method: 'post',
     header: {
-      "Content-Type": "application/x-www-form-urlencoded",
+      'Content-Type': 'application/x-www-form-urlencoded'
     },
-    showLoading: showLoading,
-  })
+    showLoading: showLoading
+  });
 };
 
 const postJson = (url, param = {}, showLoading = true) => {
@@ -101,7 +115,7 @@ const postJson = (url, param = {}, showLoading = true) => {
     header: {},
     dataType: 'json',
     showLoading: showLoading
-  })
+  });
 };
 
 const put = (url, param = {}, showLoading = true) => {
@@ -110,7 +124,7 @@ const put = (url, param = {}, showLoading = true) => {
     param,
     method: 'put',
     header: {},
-    showLoading: showLoading,
+    showLoading: showLoading
   });
 };
 
@@ -118,5 +132,5 @@ module.exports = {
   get,
   post,
   postJson,
-  put,
-}
+  put
+};

@@ -1,3 +1,4 @@
+@import '/assets/css/base.wxss';
 /* components/zmy-header/index.wxss */
 .zmy-search .van-search .van-search__content {
   border-radius: 27rpx !important;

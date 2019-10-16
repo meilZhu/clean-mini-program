@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/logs/logs",
     "pages/user/user-center/index",
     "pages/index/index",
-    "pages/logs/logs",
+    
     "pages/menu/index"
   ],
   "subPackages": [
