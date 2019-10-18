@@ -18,37 +18,30 @@ Component({
     /**
      * 头部是否需要固定定位 (选传，默认false、)
      */
-    propStatus: {
+    status: {
       type: Boolean,
       value: false
     },
     /**
      * 接收的头部tab键的数据 （选传， 默认[]）
      */
-    propTab: {
+    tab: {
       type: Array,
       vlaue: []
     },
     /**
      * 搜索框的内容  （必传）
      */
-    propText: {
+    text: {
       type: String,
       value: null
     },
     /**
      * 搜索框的占位符 （必传）
      */
-    propPlaceholder: {
+    placeholder: {
       type: String,
       value: null
-    },
-    /**
-     * 接收判断是否需要tab键（【选传，默认true】若不需要，tab就可以不传了）
-     */
-    propHasTab: {
-      type: Boolean,
-      value: true
     }
   },
 
@@ -62,37 +55,26 @@ Component({
     isFixed: false,
     // tab 键的内容
     notifyTypes: [],
-    // 提示语
-    placeholder: null,
-    // 是否需要tab键
-    hasTab: true
+    // 滑动时的索引
+    activeIndex: 0
   },
 
   // 监听
   observers: {
-    propStatus: function(bool) {
+    status: function(bool) {
       this.setData({
         isFixed: bool
       });
     },
-    propTab: function(data) {
+    tab: function(data) {
+      console.log(data);
       this.setData({
         notifyTypes: data
       });
     },
-    propText: function(str) {
+    text: function(str) {
       this.setData({
         searchText: str
-      });
-    },
-    propPlaceholder: function(str) {
-      this.setData({
-        placeholder: str
-      });
-    },
-    propHasTab: function(bool) {
-      this.setData({
-        hasTab: bool
       });
     }
   },
@@ -102,11 +84,14 @@ Component({
    */
   methods: {
     onSearch(event) {
-      this.triggerEvent('searchEvent', event.detail);
+      this.triggerEvent('onSearch', event.detail);
     },
 
     changeType(event) {
-      this.triggerEvent('tabEvent', event.detail.index);
+      this.setData({
+        activeIndex: event.detail.index
+      });
+      this.triggerEvent('toggleTab', event.detail.index);
     }
   }
 });

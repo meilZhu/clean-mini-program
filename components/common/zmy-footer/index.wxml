@@ -1,43 +1,14 @@
 <!--components/zmy-footer/index.wxml-->
 <wxs module="Permission" src="../../../utils/filter/permission-pipe.wxs"></wxs>
 <view class="zmy-btn-contain">
-  <view class="btn-content" wx:if="{{btns.length === 2}}">
-    <button
-      wx:for="{{btns}}"
-      wx:key="{{index}}"
-      hidden="{{Permission.has(item.permission)}}"
-      class="zmy-btn"
-      style="background-color: {{item.bgColor}}; color: {{item.color}}"
-      data-code="{{item.code}}"
-      bindtap="btnEvent"
-    >
-      {{item.typeName}}
-    </button>
-  </view>
-  <view class="btn-content" wx:elif="{{btns.length === 1}}">
-    <button
-      class="zmy-btn zmy-lang-btn"
-      wx:for="{{btns}}"
-      wx:key="{{index}}"
-      hidden="{{Permission.has(item.permission)}}"
-      style="background-color: {{item.bgColor}}; color: {{item.color}}"
-      data-code="{{item.code}}"
-      bindtap="btnEvent"
-    >
-      {{item.typeName}}
-    </button>
-  </view>
-  <view class="btn-content" wx:else>
-    <button
-      wx:for="{{btns}}"
-      wx:key="{{index}}"
-      hidden="{{Permission.has(item.permission)}}"
-      style="background-color: {{item.bgColor}}; color: {{item.color}}"
-      class="zmy-btn private-btn"
-      data-code="{{item.code}}"
-      bindtap="btnEvent"
-    >
-      {{item.typeName}}
-    </button>
-  </view>
+  <button
+    wx:for="{{btns}}"
+    wx:key="{{index}}"
+    hidden="{{Permission.has(item.permission)}}"
+    class="zmy-btn-normal {{item.btnType === 'primary'? 'zmy-primary': item.btnType === 'info'?'zmy-info':item.btnType === 'warning'?'zmy-warning':item.btnType === 'danger'?'zmy-danger':item.btnType === 'lineInfo'?'zmy-line-info':item.btnType === 'linePrimary'?'zmy-line-primary':item.btnType === 'lineWarning'?'zmy-line-warning':item.btnType === 'lineDanger'?'zmy-line-danger':''}} {{btns.length <= 1? 'zmy-lang-btn': btns.length > 2? 'zmy-mini-btn':''}}"
+    data-code="{{item.codeType}}"
+    bindtap="btnEvent"
+  >
+    {{item.typeName}}
+  </button>
 </view>

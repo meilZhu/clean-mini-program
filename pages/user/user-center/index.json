@@ -5,6 +5,7 @@
     "zmy-textarea": "/components/common/zmy-textarea/index",
     "zmy-input": "/components/common/zmy-input/index",
     "zmy-rich-text": "/components/common/zmy-rich-text/index",
-    "zmy-sliding-block": "/components/common/zmy-sliding-block/index"
+    "zmy-sliding-block": "/components/common/zmy-sliding-block/index",
+    "zmy-footer": "/components/common/zmy-footer/index"
   }
 }

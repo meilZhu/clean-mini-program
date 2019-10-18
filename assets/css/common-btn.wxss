@@ -19,13 +19,14 @@
 }
 /*所有按钮的样式*/
 .zmy-btn {
-  width: 215rpx;
+  padding: 0 100rpx;
   height: 68rpx;
   background: #fff;
   color: #5e9dfd;
   border: 1rpx #5e9dfd solid;
   line-height: 68rpx;
   font-size: 28rpx;
+  margin: 0 30rpx;
 }
 /*去定按钮的样式*/
 .zmy-sure-btn {

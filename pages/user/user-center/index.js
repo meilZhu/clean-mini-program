@@ -18,18 +18,21 @@ Page({
     tabs: [
       {
         typeName: '详情',
-        index: 0
+        index: 0,
+        disabled: true
       },
       {
         typeName: '待处理',
-        index: 1
+        index: 1,
+        disabled: false
       }
     ],
     isFixed: false,
     // 右侧滑块的宽
     rightWidth: 65,
     // 左侧滑块的宽
-    leftWidth: 0
+    leftWidth: 0,
+    maxDate: new Date(new Date().getTime()).setHours(0, 0, 0, 0) - 1
   },
 
   //
@@ -52,7 +55,15 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {},
+  onLoad: function(options) {
+    // console.log('time', this.data.maxDate);
+    // let t = this.data.maxDate;
+    // let time = new Date(t);
+    // console.log(time);
+    // this.setData({
+    //   maxDate: time
+    // });
+  },
 
   //
   onPageScroll: function(ev) {

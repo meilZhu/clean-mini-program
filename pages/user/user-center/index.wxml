@@ -2,31 +2,31 @@
 <wxs module="moneyFr" src="../../../utils/filter/format-money.wxs"></wxs>
 <view class="zmy-opr">
   <zmy-header
-    prop-text="{{searchText}}"
-    prop-tab="{{tabs}}"
-    prop-placeholder="请输入想搜索的内容"
-    prop-status="{{isFixed}}"
-    prop-hasTab="{{false}}"
-    bindsearchEvent="searchEvent"
-    bindtabEvent="tabEvent"
+    text="{{searchText}}"
+    tab="{{tabs}}"
+    placeholder="请输入想搜索的内容"
+    status="{{isFixed}}"
+    bindonSearch="searchEvent"
+    bindtoggleTab="tabEvent"
   >
     <view slot="select" bindtap="show">哈哈哈哈</view>
   </zmy-header>
   <view class="zmy-cell">
     <zmy-date-picker
-      prop-title="测试标题"
-      prop-date="{{time}}"
+      title="测试标题"
+      date="{{time}}"
+      maxDate="{{maxDate}}"
       bindconfirmDate="confirmDate"
     ></zmy-date-picker>
   </view>
   <view class="reason-opr">
     <zmy-textarea
       bindinputTextarea="inputTextarea"
-      prop-text="{{reason}}"
-      prop-height="100"
-      prop-maxlength="100"
-      prop-readonly="{{readonly}}"
-      prop-placeholder="请输入审批意见"
+      text="{{reason}}"
+      height="100"
+      maxlength="100"
+      readonly="{{readonly}}"
+      placeholder="请输入审批意见"
     ></zmy-textarea>
   </view>
   <view class="zmy-cell">

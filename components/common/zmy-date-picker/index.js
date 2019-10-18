@@ -13,44 +13,51 @@ Component({
     /**
      * 传递过来的索引，这个是在父组件中列表中可能用到 （选填）
      */
-    propIndex: {
+    index: {
       type: Number,
       value: 0
     },
     /**
      * 选择时间组件的标题 （必填）
      */
-    propTitle: {
+    title: {
       type: String,
       value: ''
     },
     /**
      * 传递过来的时间 （必填【回显时要用到】）
      */
-    propDate: {
+    date: {
       type: String,
       value: null
     },
     /**
      * 传递过来的选择时间的类型 （选填；默认是date【年月日】 datetime 【年月日时分】 year-month 【年月】, time 【时分】）
      */
-    propType: {
+    type: {
       type: String,
-      value: 'datetime'
+      value: 'date'
     },
     /**
      * 是否是可以编辑的状态 （选填； 默认是false）
      */
-    propReadonly: {
+    readonly: {
       type: Boolean,
       value: false
     },
     /**
      * 取值范围 （选填； 默认不传为空， 用去判定时取一天的开始点 pre: 0：00:00  还是去最晚点 next： 23:59:59）
      */
-    propRange: {
+    range: {
       type: String,
       value: ''
+    },
+    /**
+     * 时间的最大取值
+     */
+    maxDate: {
+      type: Number,
+      value: new Date().getTime() + 315619200000
     }
   },
 
@@ -62,46 +69,16 @@ Component({
     currentDate: new Date().getTime(),
     // 最小时间
     minDate: null, // 这里不做限制
-    // 时间
-    date: null,
-    // 标题
-    title: null,
-    // 是否自读
-    readonly: false,
-    // 事件类型
-    type: 'date',
-    // 所在的索引
-    index: 0,
     // 控制事件选择器隐现
     showPicker: false,
-    // 时间的取值点
-    range: ''
+    // 类型：
+    types: 'date'
   },
 
   observers: {
-    propIndex: function(index) {
+    type: function(str) {
       this.setData({
-        index
-      });
-    },
-    propTitle: function(str) {
-      this.setData({
-        title: str
-      });
-    },
-    propReadonly: function(bool) {
-      this.setData({
-        readonly: bool
-      });
-    },
-    propDate: function(date) {
-      this.setData({
-        date
-      });
-    },
-    propType: function(str) {
-      this.setData({
-        type: str
+        types: str
       });
       // 这里是由于有赞的时间选择器在类型是time时给的不是时间戳，而是一个时间点，不能用new Date() 赋值当前时间
       if (str === 'time') {
@@ -109,11 +86,6 @@ Component({
           currentDate: null
         });
       }
-    },
-    propRange: function(str) {
-      this.setData({
-        range: str
-      });
     }
   },
 
@@ -148,6 +120,7 @@ Component({
 
     // 对选择时间范围的处理
     handleTime(time) {
+      console.log(time);
       let range = this.data.range;
       switch (range) {
         case 'pre':

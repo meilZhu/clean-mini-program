@@ -2,6 +2,76 @@
 @import '/assets/css/base.wxss';
 @import '/assets/css/common-btn.wxss';
 
-.private-btn {
+/*所有按钮的样式*/
+.zmy-btn-normal {
+  padding: 0 100rpx;
+  height: 68rpx;
+  background: #fff;
+  color: #888;
+  border: 1rpx #888 solid;
+  line-height: 68rpx;
+  font-size: 28rpx;
+  margin: 0 30rpx;
+}
+
+/*单独一个按钮时的样式*/
+.zmy-lang-btn {
+  width: 95%;
+}
+
+/*按钮等于大于3个时的样式*/
+.zmy-mini-btn {
   padding: 0 65rpx;
+}
+
+/*蓝底白字*/
+.zmy-info {
+  background: #5e9dfd;
+  border-color: #5e9dfd;
+  color: #fff;
+}
+
+/*黄底白字*/
+.zmy-warning {
+  background: #ff976a;
+  border-color: #ff976a;
+  color: #fff;
+}
+
+/*绿底白字*/
+.zmy-primary {
+  background: #07c160;
+  border-color: #07c160;
+  color: #fff;
+}
+
+/*红底白字*/
+.zmy-danger {
+  background: #ee0a24;
+  border-color: #ee0a24;
+  color: #fff;
+}
+
+/*白底蓝字蓝边*/
+.zmy-line-info {
+  border-color: #5e9dfd;
+  color: #5e9dfd;
+}
+
+/*黄底白字*/
+.zmy-line-warning {
+  border-color: #ff976a;
+  color: #ff976a;
+}
+
+/*绿底白字*/
+.zmy-line-primary {
+  border-color: #07c160;
+  color: #07c160;
+}
+
+/*红底白字*/
+.zmy-line-danger {
+  border-color: #ee0a24;
+  color: #ee0a24;
 }

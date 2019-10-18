@@ -1,7 +1,7 @@
 <!--components/zmy-header/index.wxml-->
 <view class="zmy-header">
   <!--有tab按钮的头部-->
-  <view class="header" wx:if="{{hasTab}}">
+  <view class="header {{notifyTypes.length === 0 && isFixed? 'btn-contain-fixed': ''}}">
     <van-search
       class="zmy-search"
       value="{{ searchText }}"
@@ -9,8 +9,11 @@
       placeholder="{{placeholder}}"
       bind:search="onSearch"
     />
-    <view class="{{isFixed? 'btn-contain-fixed': 'btn-contain'}}">
-      <van-tabs bind:click="changeType">
+    <view
+      wx:if="{{notifyTypes.length > 0}}"
+      class="btn-contain {{isFixed? 'btn-contain-fixed': ''}}"
+    >
+      <van-tabs bind:click="changeType" active="{{activeIndex}}">
         <van-tab
           wx:for="{{ notifyTypes }}"
           wx:for-item="type"
@@ -18,22 +21,10 @@
           wx:key="idx"
           wx:id="idx"
           title="{{ type.typeName }}"
-          style="background-color:{{blue}};"
         >
         </van-tab>
       </van-tabs>
       <slot name="select"></slot>
     </view>
-  </view>
-  <!--没有tab按钮的头部-->
-  <view class="header {{isFixed? 'btn-contain-fixed': 'btn-contain'}}" wx:else>
-    <van-search
-      class="zmy-search"
-      value="{{ searchText }}"
-      maxlength="30"
-      placeholder="{{placeholder}}"
-      bind:search="onSearch"
-    />
-    <slot name="select"></slot>
   </view>
 </view>

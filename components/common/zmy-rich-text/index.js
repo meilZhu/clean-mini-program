@@ -20,42 +20,26 @@ Component({
     /**
      * 获取数据的路径
      */
-    propUrl: {
+    url: {
       type: String,
       value: ''
     },
     /**
      * 获取数据的参数
      */
-    propParam: {
+    param: {
       type: Object,
       value: {}
     }
   },
 
   // 数据监听
-  observers: {
-    propUrl: function(str) {
-      this.setData({
-        path: str
-      });
-    },
-    propParam: function(data) {
-      this.setData({
-        param: data
-      });
-    }
-  },
+  observers: {},
 
   /**
    * 组件的初始数据
    */
-  data: {
-    // 请求数据的接口
-    path: '',
-    // 获取数据的接口参数
-    param: null
-  },
+  data: {},
 
   // 组件被刚刚创建时触发
   ready: function() {

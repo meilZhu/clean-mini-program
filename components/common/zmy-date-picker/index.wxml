@@ -5,7 +5,7 @@
   <input
     type="text"
     class="zmy-input"
-    value="{{dateFr.getDate(date, '-', type)}}"
+    value="{{dateFr.getDate(date, '-', types)}}"
     placeholder="请选择时间"
     disabled="{{true}}"
   />
@@ -13,9 +13,10 @@
 </view>
 <view class="zmy-fixed-contain" wx:if="{{showPicker}}">
   <van-datetime-picker
-    type="{{type}}"
+    type="{{types}}"
     value="{{ currentDate }}"
     min-date="{{ minDate }}"
+    max-date="{{ maxDate }}"
     bind:confirm="confirmDate"
     bind:cancel="cancelDate"
   />

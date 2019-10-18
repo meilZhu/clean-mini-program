@@ -15,68 +15,41 @@ Component({
     /**
      * 接受的文本内容 （必传）
      */
-    propText: {
+    text: {
       type: String,
       value: null
     },
     /**
      * 定义文本域的高度 （选传： 默认： 200）
      */
-    propHeight: {
+    height: {
       type: Number,
       value: 200
     },
     /**
      * 是否只读 （选传: 默认 false）
      */
-    propReadonly: {
+    readonly: {
       type: Boolean,
       value: false
     },
     /**
      * 文本域的最大长度 ( 选传： 默认 200)
      */
-    propMaxlength: {
+    maxlength: {
       type: Number,
       value: 200
     },
     /**
      * 当文本为空时的提示内容 （选传;  默认： 请输入）
      */
-    propPlaceholder: {
+    placeholder: {
       type: String,
       value: '请输入'
     }
   },
 
-  observers: {
-    propText: function(str) {
-      this.setData({
-        textarea: str
-      });
-    },
-    propHeight: function(num) {
-      console.log(num);
-      this.setData({
-        height: num
-      });
-    },
-    propMaxlength: function(num) {
-      this.setData({
-        maxlength: num
-      });
-    },
-    propReadonly: function(bool) {
-      this.setData({
-        readonly: bool
-      });
-    },
-    propPlaceholder: function(str) {
-      this.setData({
-        placeholder: str
-      });
-    }
-  },
+  observers: {},
 
   /**
    * 组件的初始数据
@@ -85,20 +58,7 @@ Component({
     // 当可以操作时控制输入框隐现
     showTextarea: false,
     // 是否聚焦
-    onFocus: false,
-    /**
-     * 传递的属性
-     */
-    // 文本域的高度
-    height: 200,
-    // 提示信息
-    placeholder: '请输入',
-    // 文本域内容
-    textarea: null,
-    // 最大长度
-    maxlength: 200,
-    // 是否只读
-    readonly: false
+    onFocus: false
   },
 
   /**

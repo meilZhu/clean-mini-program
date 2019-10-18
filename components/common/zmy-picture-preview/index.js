@@ -12,21 +12,21 @@ Component({
     /**
      * 这里是只接受图片的路径 (选传)
      * */
-    propImgSrc: {
+    imgSrc: {
       type: String,
       value: ''
     },
     /**
      * 接受包含图片路径的数组 （选传）
      */
-    propImages: {
+    images: {
       type: Array,
       value: []
     },
     /**
      * 是否展示删除按钮
      */
-    propRemove: {
+    remove: {
       type: Boolean,
       value: true
     }
@@ -34,19 +34,19 @@ Component({
 
   // 数据监听
   observers: {
-    propImgSrc: function(str) {
+    imgSrc: function(str) {
       if (!str) {
         this.setData({
           single: false
         });
       } else {
         this.setData({
-          imgSrc: str,
+          src: str,
           single: true
         });
       }
     },
-    propImages: function(arr) {
+    images: function(arr) {
       if (arr.length === 0) {
         this.setData({
           single: true
@@ -54,11 +54,11 @@ Component({
       } else {
         this.setData({
           single: false,
-          images: arr
+          image: arr
         });
       }
     },
-    propRemove: function(bool) {
+    remove: function(bool) {
       this.setData({
         showRemoveBtn: bool
       });
@@ -70,9 +70,9 @@ Component({
    */
   data: {
     // 包含多张图片路径的数组（内部为对象）
-    images: [],
+    image: [],
     // 图片的路径
-    imgSrc: '',
+    src: '',
     // 是否为一张图片
     single: true,
     // 尺寸的盒子
@@ -88,7 +88,7 @@ Component({
    */
   methods: {
     closeImgContain() {
-      this.triggerEvent('closeEvent');
+      this.triggerEvent('close');
     },
 
     // 单独一张图片的加载
@@ -130,7 +130,7 @@ Component({
 
     // 底部的删除事件
     remove() {
-      this.triggerEvent('removeEvent');
+      this.triggerEvent('remove');
     }
   }
 });

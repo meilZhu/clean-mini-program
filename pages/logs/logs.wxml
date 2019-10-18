@@ -5,11 +5,11 @@
   </block> -->
   <view class="zmy-contain">
     <zmy-remove-block
-      prop-rightWidth="{{65}}"
-      data-index="{{1}}"
-      prop-leftWidth="{{0}}"
-      prop-rightAsync="{{true}}"
-      bindrightAsyncEvent="remove"
+      rightWidth="{{65}}"
+      index="{{1}}"
+      leftWidth="{{0}}"
+      rightAsync="{{true}}"
+      bindrightAsyncConfirm="remove"
     >
       <view class="zmy-list-contain">
         <view class="zmy-list">
@@ -19,12 +19,12 @@
       </view>
     </zmy-remove-block>
     <zmy-remove-block
-      prop-leftAsync="{{true}}"
-      data-index="{{2}}"
-      bindleftAsyncEvent="like"
-      prop-leftText="喜欢"
-      bindrightUnAsyncEvent="unlike"
-      prop-rightText="不喜欢"
+      leftAsync="{{true}}"
+      index="{{2}}"
+      bindleftAsyncConfirm="like"
+      leftText="喜欢"
+      bindrightUnAsyncConfirm="unlike"
+      rightText="不喜欢"
     >
       <view class="zmy-list-contain">
         <view class="zmy-list">
@@ -37,4 +37,6 @@
   <view class="" hover-class="none" hover-stop-propagation="false">
     hauigdiidsidasggaigdasg
   </view>
+  <button open-type="contact" bindcontact="handleContact">跳转会话</button>
+  <zmy-footer btn="{{btns}}"></zmy-footer>
 </view>

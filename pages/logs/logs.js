@@ -16,7 +16,21 @@ const util = require('../../utils/plugins/util');
 
 Page({
   data: {
-    logs: []
+    logs: [],
+    btns: [
+      {
+        typeName: '取消',
+        type: 'cancel',
+        codeType: 'cancel',
+        btnType: 'normal'
+      },
+      {
+        typeName: '确定',
+        type: 'sure',
+        codeType: 'sure',
+        btnType: 'lineWarning'
+      }
+    ]
   },
   onLoad: function() {
     // this.setData({
@@ -27,11 +41,21 @@ Page({
   },
   remove(evt) {
     console.log(evt);
+    let date = new Date('2000-01-01').getTime();
+    console.log(date);
+    let time = new Date('2010-01-01').getTime();
+    console.log(time);
+    let t = time - date;
+    console.log(t);
   },
   like(evt) {
     console.log(evt);
   },
   unlike(evt) {
     console.log(evt);
+  },
+  handleContact(e) {
+    console.log(e.detail.path);
+    console.log(e.detail.query);
   }
 });

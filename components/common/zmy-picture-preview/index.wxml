@@ -6,12 +6,12 @@
       <image
         bindload="singleImgLoad"
         style="width:{{ imgSize.width }}rpx; height:{{ imgSize.height }}rpx;"
-        src="{{imgSrc}}"
+        src="{{src}}"
       ></image>
     </view>
     <!--多张图片的加载-->
     <view class="zmy-many-content" wx:if="{{!single}}">
-      <view class="zmy-content" wx:for="{{images}}" wx:key="{{index}}">
+      <view class="zmy-content" wx:for="{{image}}" wx:key="{{index}}">
         <image
           class="zmy-image"
           bindload="manyImgLoad"

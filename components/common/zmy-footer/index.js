@@ -10,18 +10,18 @@ Component({
    */
   properties: {
     // 底部按钮的数据
-    propBtn: {
+    btn: {
       type: Array,
-      default: [],
-    },
+      default: []
+    }
   },
 
   observers: {
-    propBtn: function(arr) {
+    btn: function(arr) {
       this.setData({
-        btns: arr,
+        btns: arr
       });
-    },
+    }
   },
 
   /**
@@ -29,7 +29,7 @@ Component({
    */
   data: {
     // btn数据
-    btns: [],
+    btns: []
   },
 
   /**
@@ -43,16 +43,17 @@ Component({
         this.goBack();
       } else if (code === 'sure') {
         this.triggerEvent('sureEvent');
+      } else if (code === 'userDefine') {
+        this.triggerEvent('userDefine');
       } else {
         this.triggerEvent('otherEvent');
       }
     },
-
     // 返回上一页的操作
     goBack() {
       wx.navigateBack({
-        delta: 1,
+        delta: 1
       });
-    },
-  },
+    }
+  }
 });
