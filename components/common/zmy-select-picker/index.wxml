@@ -1,0 +1,17 @@
+<!--components/zmy-select-picker/index.wxml-->
+<view class="zmy-list"
+  ><text class="zmy-title">{{title}}</text
+  ><input
+    class="zmy-input"
+    placeholder-class="zmy-input-placeholder"
+    placeholder="请选择"
+    type="text"
+    value="{{data}}"
+    disabled="true"
+  />
+  <van-icon wx:if="{{!readonly}}" bindtap="changeInfo" class="zmy-icon-right" name="arrow" />
+</view>
+<!--选择的弹框-->
+<view class="zmy-picker-contain" wx:if="{{pickerShow}}">
+  <van-picker show-toolbar columns="{{ pickerList }}" bind:confirm="confirm" bind:cancel="cancel" />
+</view>

@@ -1,0 +1,14 @@
+/* components/zmy-select-picker/index.wxss */
+@import '/assets/css/common-line';
+.zmy-picker-contain {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}

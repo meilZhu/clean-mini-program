@@ -30,6 +30,18 @@ Page({
         codeType: 'sure',
         btnType: 'lineWarning'
       }
+    ],
+    date: null,
+    dateId: null,
+    list: [
+      {
+        label: '1',
+        value: '张三'
+      },
+      {
+        label: '2',
+        value: '李四'
+      }
     ]
   },
   onLoad: function() {
@@ -57,5 +69,12 @@ Page({
   handleContact(e) {
     console.log(e.detail.path);
     console.log(e.detail.query);
+  },
+
+  sure(evt) {
+    this.setData({
+      date: evt.detail.show,
+      dateId: evt.detail.opr
+    });
   }
 });

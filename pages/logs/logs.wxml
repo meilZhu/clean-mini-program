@@ -37,6 +37,16 @@
   <view class="" hover-class="none" hover-stop-propagation="false">
     hauigdiidsidasggaigdasg
   </view>
+  <view>
+    <zmy-select-picker
+      title="测试选择"
+      data="{{date}}"
+      list="{{list}}"
+      show-property="value"
+      opr-property="label"
+      bindconfirm="sure"
+    ></zmy-select-picker>
+  </view>
   <button open-type="contact" bindcontact="handleContact">跳转会话</button>
   <zmy-footer btn="{{btns}}"></zmy-footer>
 </view>

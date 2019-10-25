@@ -2,6 +2,7 @@
   "navigationBarTitleText": "查看启动日志",
   "usingComponents": {
     "zmy-remove-block": "/components/common/zmy-sliding-block/index",
-    "zmy-footer": "/components/common/zmy-footer/index"
+    "zmy-footer": "/components/common/zmy-footer/index",
+    "zmy-select-picker": "/components/common/zmy-select-picker/index"
   }
 }
